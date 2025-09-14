@@ -3,17 +3,19 @@ import React from 'react'
 import HeroImg from '../../assets/img/avatar.gif'
 
 import Button from '../button'
-import Quote from '../quote'
+import Quote from './Quote.jsx'
 
 function Hero() {
   return (
-    <div className='sm:mt-20 mt-4'>
-      <div className='lg:flex gap-8 xl:gap-0 lg:w-11/12 xl:w-9/12 mx-auto mb-4 mt-24 xl:mt-0 '>
+    <div className='mt-4'>
+      <div className='lg:flex gap-8 xl:gap-0 lg:w-11/12 xl:w-9/12 mx-auto mb-4 xl:mt-0 '>
         
         <div className='md:w-10/12 lg:auto w-11/12 m-auto'>
-          <h2 className='lg:text-4xl text-3xl font-semibold'>Ace is a <span className='text-primary'>front-end developer</span> with a passion for creating stunning and responsive websites.</h2>
-          <p className='lg:text-2xl text-xl font-thin my-4'>He crafts responsive websites where technologies meet creativity</p>
-          <Button>Contact me</Button>
+          <h2 className='lg:text-4xl text-3xl font-semibold'>Ace is a <span className='text-primary'>back-end developer</span> who waste time, so others wont have to.</h2>
+          <p className='lg:text-2xl text-xl font-thin my-4'>He values clean architecture and writes clean, maintainable code.</p>
+          <a href="#contacts">
+            <Button>Contact me</Button>
+          </a>
         </div>
 
         <div className='mx-auto mt-8 w-11/12 '>

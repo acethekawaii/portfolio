@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 
-import Projects from './pages/Projects'
-import About from './pages/About'
-import Certification from './pages/Certification'
-
+import Projects from './pages/projects'
+import About from './pages/about'
+import Certification from './pages/certification'
+import Details from "./pages/projects/details.jsx";
 
 import {
   createBrowserRouter,
@@ -29,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/certification",
     element: <Certification />,
+  },
+  {
+    path: "/projects/details/attendify",
+    element: <Details />,
   },
 ]);
 
