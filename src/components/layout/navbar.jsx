@@ -50,8 +50,12 @@ function Navbar() {
             <li className='mt-2 ml-4'><a href='#contacts' onClick={toggleMenu} className='font-light text-gray text-2xl'><span className='text-primary font-bold'>#</span>contacts</a></li>
           
             <div className='flex justify-center'>
-              <Fa.FaGithubSquare size={36} className="mt-4 text-gray cursor-pointer"/>
-              <Fa.FaLinkedin size={36} className="mt-4 text-gray cursor-pointer"/>
+              <a href="https://github.com/lugh-tuatha" target="_blank">
+                <Fa.FaGithubSquare size={36} className="mt-4 text-gray cursor-pointer"/>
+              </a>
+              <a href="https://www.linkedin.com/in/ace-gabriel-p-pasiliao-74594b250/" target="_blank">
+                <Fa.FaLinkedin size={36} className="mt-4 text-gray cursor-pointer"/>
+              </a>
             </div>
           </ul>
 

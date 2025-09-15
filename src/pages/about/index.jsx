@@ -7,7 +7,6 @@ import Socials from '../../components/socials/index.jsx'
 import SkillContainer from '../../components/skill-components/index.jsx'
 
 import AboutHero from '../../assets/svg/about-hero.svg'
-import ProcrastinateMeme from '../../assets/img/meme/procrastinate.jpeg'
 import skills from '../../data/skills.js'
 
 const funFacts = [
