@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Design tokens - "The Engineer's Workbench"
+   Light only. Pure-white surface, near-black ink, one deep-teal accent (<=10%).
+   OKLCH throughout. Contrast verified: ink ~10:1, muted ~4.6:1, accent fill ~5:1.
+---------------------------------------------------------------------------- */
+:root {
+  --bg: oklch(1 0 0);
+  --surface: oklch(0.986 0.0015 220);
+  --surface-2: oklch(0.968 0.003 220);
+
+  --ink: oklch(0.27 0.012 235);
+  --ink-soft: oklch(0.40 0.012 235);
+  --muted: oklch(0.505 0.012 235);
+
+  --accent: oklch(0.48 0.095 214);
+  --accent-deep: oklch(0.42 0.10 216);
+  --accent-tint: oklch(0.965 0.022 214);
+  --accent-tint-strong: oklch(0.93 0.035 214);
+
+  --border: oklch(0.918 0.004 230);
+  --border-strong: oklch(0.85 0.006 230);
+
+  --on-accent: oklch(0.99 0.004 214);
+
+  --shadow-lift: 0 1px 2px oklch(0.3 0.02 235 / 0.05), 0 10px 30px oklch(0.3 0.02 235 / 0.08);
+  --shadow-soft: 0 1px 2px oklch(0.3 0.02 235 / 0.04), 0 4px 14px oklch(0.3 0.02 235 / 0.05);
+
+  /* Semantic z-index scale */
+  --z-base: 0;
+  --z-sticky: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-tint: var(--accent-tint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-on-accent: var(--on-accent);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ---------------------------------------------------------------- Base ----- */
+* {
+  border-color: var(--border);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection {
+  background: var(--accent-tint-strong);
+  color: var(--accent-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------ Utilities ---- */
+.shell {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+.measure {
+  max-width: 65ch;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  color: var(--accent-deep);
+}
+
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-ligatures: none;
+}
+
+/* ----------------------------------------------------------------- Chips --- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 1.875rem;
+  padding-inline: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.chip-accent {
+  background: var(--accent-tint);
+  border-color: var(--accent-tint-strong);
+  color: var(--accent-deep);
+}
+
+/* --------------------------------------------------------- Inline link ---- */
+.link {
+  color: var(--accent-deep);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.18s var(--ease-out-quint);
+}
+.link svg {
+  transition: transform 0.25s var(--ease-out-quint);
+}
+.link:hover {
+  color: var(--accent);
+}
+.link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* --------------------------------------------------------- Photo swap ----- */
+.photo-swap {
+  position: relative;
+  isolation: isolate;
+}
+.photo-swap .photo-top {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-out-quint);
+}
+.photo-swap:hover .photo-top,
+.photo-swap:focus-visible .photo-top,
+.photo-swap:focus-within .photo-top {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-swap .photo-top {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------- Reduced-motion guard --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------- Section rule -- */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-strong) 12%,
+    var(--border-strong) 88%,
+    transparent
+  );
+  border: 0;
+}
