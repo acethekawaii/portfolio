@@ -1,11 +1,14 @@
 import { Mail } from "lucide-react";
-import { links, profile } from "@/lib/content";
 import { GitHub, LinkedIn } from "@/components/ui/brand-icons";
 
 const items = [
-  { href: links.github, label: "GitHub", Icon: GitHub },
-  { href: links.linkedin, label: "LinkedIn", Icon: LinkedIn },
-  { href: `mailto:${profile.email}`, label: "Email", Icon: Mail },
+  { href: "https://github.com/acethekawaii", label: "GitHub", Icon: GitHub },
+  {
+    href: "https://www.linkedin.com/in/ace-gabriel-p-pasiliao-74594b250",
+    label: "LinkedIn",
+    Icon: LinkedIn,
+  },
+  { href: "mailto:acegabriel0809@gmail.com", label: "Email", Icon: Mail },
 ];
 
 export function SocialLinks({ className = "" }: { className?: string }) {

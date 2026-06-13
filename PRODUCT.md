@@ -10,13 +10,26 @@ Hiring managers, engineering leads, and recruiters at companies **actively hirin
 
 ## Candidate
 
-**Ace Gabriel P. Pasiliao** — Manila, Philippines. Backend-first software engineer, full-stack in practice ("backend developer but because of AI I'm full-stack"). Currently System Developer / Acting Tech Lead at Geoplan PH (leads a team of 4). 5+ years building software, 1+ year in formal SWE roles. Primary stack: TypeScript, NestJS, AngularJS, PostgreSQL, REST APIs. Secondary: React, Next.js, Tailwind, Python, FastAPI, MySQL, MongoDB, PHP. Personal motto / hero line: **"Failing to plan is planning to fail."** Links: GitHub `lugh-tuatha`, email acegabriel0809@gmail.com, site acethekawaii.work, plus LinkedIn and live demos. Resume at `public/ACE_CV.pdf`.
+**Ace Gabriel P. Pasiliao**: Manila, Philippines. Backend-first software engineer, full-stack in practice ("backend developer but because of AI I'm full-stack"). Currently System Developer / Acting Tech Lead at Geoplan PH (leads a team of 4). 5+ years building software, 1+ year in formal SWE roles. Primary stack: TypeScript, NestJS, AngularJS, PostgreSQL, REST APIs. Secondary: React, Next.js, Tailwind, Python, FastAPI, MySQL, MongoDB, PHP. Personal motto / hero line: **"Failing to plan is planning to fail."** Links: GitHub `acethekawaii`, email acegabriel0809@gmail.com, site acethekawaii.work, plus LinkedIn and live demos. Resume at `public/ace-curriculum-vitae.pdf`.
 
-Flagship project (the case study): **Attendify v2**, a production face-recognition attendance system in use by a church since Oct 2024 — 12,000+ attendance logs, 2,100+ profiles, built with Angular, NestJS, FastAPI, Docker, PostgreSQL. Three additional projects featured without full writeups.
+Flagship project (the case study): **Attendify v2**, a production face-recognition attendance system in use by a church since Oct 2024, with 16,000+ attendance logs and 2,400+ profiles. Built with Angular, NestJS, FastAPI, Docker, and PostgreSQL. One additional project is featured without a full writeup.
 
 ## Product Purpose
 
 A personal portfolio for a **mid-level full-stack software engineer** applying to remote roles. The candidate is backend-strong and architecture-minded; the target job list leans on the JS/SQL/NoSQL stack he already works in (Node/Next, PostgreSQL, MySQL, MongoDB, plus PHP). The site exists to convert a cold link into an interview by showing real shipped, production-grade work (systems that real users depend on), a legible skill set, and a hireable, low-risk professional presence. Success = a recruiter reaches the contact/resume CTA convinced, and the site itself (built in Next.js) is read as a working sample of the candidate's craft. The portfolio is both the message and the proof.
+
+But **people hire people, not portfolios.** Proof alone makes him interchangeable with every other candidate who shipped something; the site must also let the reviewer *meet* him: why he builds, how he thinks, what he's like to work with. That is how he is remembered as a future colleague, not a stack list.
+
+## The Human Layer
+
+The narrative anchors that answer "who is this person", drawn from real facts, never invented:
+
+- **He builds for people who depend on the software, not for the repo.** Attendify isn't a demo. A real church community runs on it every week. The why behind the work: software that someone actually relies on.
+- **The motto is how he actually works.** "Failing to plan is planning to fail" = architecture-first, plans before code, thinks in systems and database models before opening the editor.
+- **He lifts the team.** Acting tech lead at 1 year in; mentored two interns. The kind of developer who explains the why, not just assigns the task.
+- **Pragmatic, not precious.** Backend-first by identity, full-stack in practice because AI changed the game and he adapted instead of gatekeeping. Tools serve shipping.
+
+**How it ships:** each project carries **one human line** (why it exists, or what it cost/taught him) alongside the straight-faced metrics; the About section answers "what kind of developer is this" in first person, in his voice. One sentence per surface, a glimpse, not a memoir. The proof stays the lead; the human layer is why the proof is remembered.
 
 ## Brand Personality
 
@@ -43,6 +56,7 @@ The motto "Failing to plan is planning to fail" stays, but it's allowed to wink 
 3. **Show shipped work, not adjectives.** Lead with concrete projects, stack, and outcomes over self-describing buzzwords.
 4. **Warmth through wit, restraint through visuals.** Personality lives in the copy (a dry aside, a pun, a self-aware footer) and in motion, spacing, and detail, never in loud color or theming. The page looks calm and confident; the words have a sense of humor. One earns trust, the other earns a smile.
 5. **Frictionless to act on.** Resume, GitHub, live demos, and contact are always one obvious click away.
+6. **People hire people.** Every proof surface carries one human line: why it exists, what it taught him. The About reads as a person, not a third-person bio. The work convinces; the person gets the callback.
 
 ## Accessibility & Inclusion
 

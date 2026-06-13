@@ -46,6 +46,7 @@
   --color-accent: var(--accent);
   --color-accent-deep: var(--accent-deep);
   --color-accent-tint: var(--accent-tint);
+  --color-accent-tint-strong: var(--accent-tint-strong);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-on-accent: var(--on-accent);
@@ -198,6 +199,13 @@ p {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ------------------------------------------------------------ Page plane -- */
+/* The scrolling page sits on this plane, above the sticky footer. The shadow
+   marks the seam where the page lifts away to reveal it. */
+.page-plane {
+  box-shadow: 0 24px 48px -24px oklch(0.3 0.02 235 / 0.28);
 }
 
 /* ---------------------------------------------------------- Section rule -- */

@@ -2,13 +2,14 @@ import Image from "next/image";
 import photo from "../../public/professional-photo.png";
 import photoGlasses from "../../public/professional-photo-glasses.png";
 
-/* Playful detail: the portrait swaps to the glasses shot on hover / focus.
-   Pure CSS crossfade (see .photo-swap); keyboard-focusable so it's not
-   hover-only, and held still under reduced motion. */
-export function ProfilePhoto() {
+/* Compact avatar. The face is a detail now, not the headline; the playful
+   bit stays: it swaps to the glasses shot on hover / focus. Pure CSS
+   crossfade (see .photo-swap), keyboard-focusable, still under reduced
+   motion. */
+export function ProfilePhoto({ className = "h-12 w-12" }: { className?: string }) {
   return (
     <figure
-      className="photo-swap aspect-square w-full overflow-hidden rounded-2xl border bg-surface"
+      className={`photo-swap shrink-0 overflow-hidden rounded-full border border-border-strong bg-surface ${className}`}
       tabIndex={0}
       aria-label="Portrait of Ace Gabriel Pasiliao. It changes to a glasses-on photo on hover."
     >
@@ -17,7 +18,7 @@ export function ProfilePhoto() {
         alt="Ace Gabriel Pasiliao"
         placeholder="blur"
         priority
-        sizes="(max-width: 880px) 70vw, 360px"
+        sizes="96px"
         className="h-full w-full object-cover"
       />
       <Image
@@ -25,7 +26,7 @@ export function ProfilePhoto() {
         alt=""
         aria-hidden="true"
         placeholder="blur"
-        sizes="(max-width: 880px) 70vw, 360px"
+        sizes="96px"
         className="photo-top h-full w-full object-cover"
       />
     </figure>

@@ -1,9 +1,42 @@
-import { skills } from "@/lib/content";
+import { Reveal, Stagger, StaggerItem } from "./reveal";
 
 const groups: { label: string; items: readonly string[]; accent?: boolean }[] = [
-  { label: "Primary stack", items: skills.primary, accent: true },
-  { label: "Also build with", items: skills.also },
-  { label: "Practices", items: skills.practices },
+  {
+    label: "Primary stack",
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "NestJS",
+      "Angular",
+      "PostgreSQL",
+      "REST APIs",
+    ],
+    accent: true,
+  },
+  {
+    label: "Also build with",
+    items: [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Motion",
+      "Lenis",
+      "PostHog",
+      "Python",
+      "FastAPI",
+      "MySQL",
+      "MongoDB",
+    ],
+  },
+  {
+    label: "Practices",
+    items: [
+      "System design",
+      "Clean architecture",
+      "Database design",
+      "AI-assisted development",
+    ],
+  },
 ];
 
 export function StackSection() {
@@ -14,7 +47,7 @@ export function StackSection() {
     >
       <div className="shell">
         <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
-          <div>
+          <Reveal>
             <h2 className="text-[clamp(1.7rem,4vw,2.3rem)] font-semibold">
               The toolkit
             </h2>
@@ -23,7 +56,7 @@ export function StackSection() {
               the full stack (and yes, AI helped me make peace with CSS). Clean
               architecture keeps systems maintainable as they grow.
             </p>
-          </div>
+          </Reveal>
 
           <dl className="flex flex-col gap-7">
             {groups.map((group) => (
@@ -35,16 +68,18 @@ export function StackSection() {
                   {group.label}
                 </dt>
                 <dd>
-                  <ul className="flex flex-wrap gap-2">
+                  <Stagger as="ul" className="flex flex-wrap gap-2" gap={0.04}>
                     {group.items.map((item) => (
-                      <li
+                      <StaggerItem
                         key={item}
+                        as="li"
+                        y={8}
                         className={`chip ${group.accent ? "chip-accent" : ""}`}
                       >
                         {item}
-                      </li>
+                      </StaggerItem>
                     ))}
-                  </ul>
+                  </Stagger>
                 </dd>
               </div>
             ))}

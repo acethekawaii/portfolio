@@ -1,6 +1,6 @@
 <!-- SEED: re-run /impeccable document once there's real code to capture the actual tokens, components, and sidecar. -->
 ---
-name: Ace Gabriel Pasiliao — Portfolio
+name: Ace Gabriel Pasiliao - Portfolio
 description: Clean, light, content-first portfolio for a backend-strong full-stack software engineer.
 colors:
   bg: "#ffffff"
@@ -24,7 +24,7 @@ typography:
     fontWeight: 400
 ---
 
-# Design System: Ace Gabriel Pasiliao — Portfolio
+# Design System: Ace Gabriel Pasiliao - Portfolio
 
 ## 1. Overview
 
@@ -32,7 +32,7 @@ typography:
 
 A calm, white, content-first surface that reads like the workspace of an engineer who values clean architecture: deliberate, legible, nothing decorative for its own sake. The site is itself a work sample, so every choice favors precision and restraint over flourish. Warmth and personality come through generous spacing, confident typography, smooth motion, and a single trustworthy accent, never through loud color or theming. The reviewer should feel "competent, easy to work with" within seconds.
 
-This system explicitly rejects the **generic dev-template portfolio** (dark mode, gradient blobs, neon, "Hi I'm X" hero), **over-animated / gimmicky** motion (cursor trails, parallax circus), **corporate / sterile SaaS** blandness, and **cluttered maximalism**. It is **light theme only** — dark mode is out of scope by preference. References in spirit: the content-first craft of Brittany Chiang, Josh Comeau, and Lee Robinson, with the surface precision of Linear / Vercel.
+This system explicitly rejects the **generic dev-template portfolio** (dark mode, gradient blobs, neon, "Hi I'm X" hero), **over-animated / gimmicky** motion (cursor trails, parallax circus), **corporate / sterile SaaS** blandness, and **cluttered maximalism**. It is **light theme only**. Dark mode is out of scope by preference. References in spirit: the content-first craft of Brittany Chiang, Josh Comeau, and Lee Robinson, with the surface precision of Linear / Vercel.
 
 **Key Characteristics:**
 - Pure-white surface, near-black ink, one deep-teal accent used sparingly (~8%).
@@ -50,7 +50,7 @@ A near-neutral light palette anchored by a single deep, engineered teal. Color i
 
 ### Neutral
 - **Ink** (`#2b2f31` / `oklch(0.30 0.006 220)`): Body and heading text on white. Near-black with a whisper of cool to sit with the teal. Targets ≥7:1 on white.
-- **Muted** (`#5c6469` / `oklch(0.50 0.008 220)`): Secondary text, metadata, captions. Holds ≥4.5:1 on white — never lighter (no washed-out grey body text).
+- **Muted** (`#5c6469` / `oklch(0.50 0.008 220)`): Secondary text, metadata, captions. Holds ≥4.5:1 on white. Never lighter (no washed-out grey body text).
 - **Surface** (`#f7f8f8` / `oklch(0.985 0.001 220)`): Section bands, cards, code blocks. A barely-there step off pure white for quiet layering.
 - **Border** (`#e6e8e9` / `oklch(0.93 0.002 220)`): Hairline dividers, card outlines, input strokes. 1px only.
 - **Background** (`#ffffff` / `oklch(1 0 0)`): The dominant surface. Pure white, no hidden warmth.
@@ -63,7 +63,7 @@ A near-neutral light palette anchored by a single deep, engineered teal. Color i
 
 **Display Font:** Geist (with `ui-sans-serif, system-ui, sans-serif`)
 **Body Font:** Geist (same family, lighter weights)
-**Label/Mono Font:** Geist Mono — reserved for stack tags, metadata, metrics, and inline code (a quiet "engineer" signal)
+**Label/Mono Font:** Geist Mono, reserved for stack tags, metadata, metrics, and inline code (a quiet "engineer" signal)
 
 **Character:** One modern, neutral grotesque doing all the work. Hierarchy is built from weight contrast (400 body vs 600 headings) and a clear scale, not from competing typefaces. Mono appears only as a deliberate technical accent.
 
@@ -71,8 +71,8 @@ A near-neutral light palette anchored by a single deep, engineered teal. Color i
 - **Display** (600, `clamp(2.5rem, 6vw, 4rem)`, lh 1.05, tracking -0.02em): Hero name / page titles. `text-wrap: balance`. Ceiling stays well under 6rem.
 - **Headline** (600, `clamp(1.5rem, 3vw, 2rem)`, lh 1.15): Section headings.
 - **Title** (500, `1.125rem`, lh 1.3): Project titles, card headings.
-- **Body** (400, `1rem–1.0625rem`, lh 1.6): Prose. Capped at 65–75ch. `text-wrap: pretty` on long copy.
-- **Label / Mono** (400–500, `0.8125rem`, tracking 0.01em): Stack tags, metrics, metadata. Sentence or natural case — no all-caps sentences.
+- **Body** (400, `1rem-1.0625rem`, lh 1.6): Prose. Capped at 65-75ch. `text-wrap: pretty` on long copy.
+- **Label / Mono** (400-500, `0.8125rem`, tracking 0.01em): Stack tags, metrics, metadata. Sentence or natural case. No all-caps sentences.
 
 ### Named Rules
 **The One Family Rule.** Geist (+ Geist Mono for technical accents) is the entire system. No third typeface. Contrast comes from weight and scale, not new fonts.
@@ -103,7 +103,7 @@ Flat by default. Depth comes from tonal layering (white ↔ `surface`) and hairl
 - **Background:** White, or `surface` for quiet grouping.
 - **Shadow Strategy:** Flat at rest; `Lift` on hover for linked project cards.
 - **Border:** 1px `border` hairline.
-- **Internal Padding:** 20–28px.
+- **Internal Padding:** 20-28px.
 
 ### Inputs / Fields
 - **Style:** White fill, 1px `border`, 8px radius.
@@ -125,8 +125,8 @@ Flat by default. Depth comes from tonal layering (white ↔ `surface`) and hairl
 
 ### Don't:
 - **Don't** ship the **generic dev-template portfolio**: dark mode, gradient blobs, neon, "Hi I'm X" hero.
-- **Don't** add **dark mode** — light theme only, by preference.
+- **Don't** add **dark mode**. Light theme only, by preference.
 - **Don't** go **over-animated / gimmicky**: no cursor trails, no parallax circus, no motion for its own sake.
-- **Don't** read **corporate / sterile SaaS** or drift into **cluttered maximalism** — restraint and whitespace are the point.
+- **Don't** read **corporate / sterile SaaS** or drift into **cluttered maximalism**. Restraint and whitespace are the point.
 - **Don't** use a tiny tracked all-caps eyebrow above every section, gradient text, side-stripe borders, or glassmorphism.
 - **Don't** tint the white surface "to feel warm", and never let the kawaii handle become a cute/playful visual identity.
